@@ -16,16 +16,16 @@ const images = [
 function addImages() {
   const gallery = document.querySelector(".gallery");
 
-  for (let i = 0; i < images.length; i++) {
+  images.forEach((image) => {
     const listItem = document.createElement("li");
 
     listItem.insertAdjacentHTML(
       "afterbegin",
-      `<img src=${images[i].url} alt="${images[i].alt}"></img>`
+      `<img src=${image.url} alt="${image.alt}"></img>`
     );
 
     gallery.append(listItem);
-  }
+  });
 }
 
 addImages();
