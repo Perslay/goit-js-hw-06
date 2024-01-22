@@ -2,7 +2,6 @@ const numberInput = document.querySelector("input[type='number']");
 const createBtn = document.querySelector("[data-create]");
 const destroyBtn = document.querySelector("[data-destroy]");
 const boxes = document.querySelector("#boxes");
-const boxesLength = boxes.children.length;
 
 createBtn.addEventListener("click", createBoxes);
 destroyBtn.addEventListener("click", destroyBoxes);
@@ -23,6 +22,19 @@ function createBoxes() {
     box.style.width = `${30 + 10 * i}px`;
     boxes.append(box);
   }
+
+  // if (numberInput.value >= 1 && numberInput.value <= 100) {
+  //   for (let i = 0; i < amount; i++) {
+  //     const size = 30 + i * 10;
+  //     const box = document.createElement("div");
+
+  //     box.style.width = size + "px";
+  //     box.style.height = size + "px";
+  //     box.style.backgroundColor = getRandomHexColor();
+
+  //     boxes.append(box);
+  //   }
+  // }
 }
 
 function destroyBoxes() {
