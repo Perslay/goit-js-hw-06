@@ -5,8 +5,9 @@ input.addEventListener("blur", validation);
 function validation() {
   const inputText = input.value;
   const finalText = inputText.trim();
+  const correctLength = Number(input.dataset.length);
 
-  if (finalText.length >= 6) {
+  if (finalText.length === correctLength) {
     input.classList.add("valid");
     input.classList.remove("invalid");
   } else {

@@ -6,9 +6,11 @@ const submit = document.querySelector("button[type='submit']");
 submit.addEventListener("click", (event) => {
   event.preventDefault();
   if (email.value !== "" && password.value !== "") {
-    console.log(
-      `{${email.name}: ${email.value}, ${password.name}: ${password.value}}`
-    );
+    const formData = {
+      email: email.value,
+      password: password.value,
+    };
+    console.log(formData);
   } else {
     alert("All input fields must be filled before proceeding!");
   }
