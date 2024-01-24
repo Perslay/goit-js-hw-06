@@ -3,7 +3,7 @@ const email = document.querySelector("[name='email']");
 const password = document.querySelector("[name='password']");
 const submit = document.querySelector("button[type='submit']");
 
-submit.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (email.value !== "" && password.value !== "") {
     const formData = {
